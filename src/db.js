@@ -21,7 +21,7 @@ const ssl = nodeEnv !== 'development' ? { rejectUnauthorized: false } : false;
 const pool = new pg.Pool({ connectionString, ssl });
 
 // TODO gagnagrunnstengingar
-const pool = new pg.Pool({ connectionString });
+//const pool = new pg.Pool({ connectionString });
 
 pool.on('error', (err) => {
   console.error('Unexpected error on idle client', err);
