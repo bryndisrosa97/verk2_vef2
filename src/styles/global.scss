@@ -1,0 +1,61 @@
+@import 'config';
+
+* {
+  padding: 0;
+  margin: 0;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+}
+
+html { /* stylelint-disable-line */
+  background-color: rgb(253, 255, 232);
+  box-sizing: border-box;
+  overflow-x: hidden;
+
+  font-family: 'Roboto', sans-serif;
+  font-size: 16px;
+}
+
+.signatures {
+  margin-top: 2rem;
+}
+
+input,
+select,
+textarea,
+button {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 16px;
+}
+
+.line {
+border:none;
+border-top-style: dotted;
+border-color: rgb(232, 233, 163);
+margin: 0.001rem 0 0 0;
+margin-bottom: 2rem;
+margin-top: 2rem;
+}
+
+h1, h2 {
+  margin-bottom: 1rem;
+  font-family: sans-serif;
+  font-weight: bold;
+}
+
+main {
+  margin: 2rem;
+}
+
+::marker {
+  font-size: 2rem;
+}
+
+.input--invalid {
+  border-color: rgb(134, 24, 24);
+  background-color: #fbb;
+}

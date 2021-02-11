@@ -4,7 +4,14 @@
   "description": "[Kynning í fyrirlestri](https://www.youtube.com/watch?v=1kRJBE040oY).",
   "main": ".eslintrc.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "setup": "node ./src/setup.js",
+    "stylelint": "stylelint ./src/styles/*.scss --syntax scss",
+    "eslint": "eslint ./src/*.js",
+    "sass": "node-sass --source-map-embed --recursive ./src/styles/style.scss ./public/styles.css",
+    "sass-watch": "node-sass --source-map-embed --watch --recursive src/styles/style.scss ./public/styles.css",
+    "demon": "nodemon ./src/app.js",
+    "start": "concurrently  npm:sass npm:sass-watch npm:demon",
+    "test": "concurrently npm:stylelint npm:eslint"
   },
   "repository": {
     "type": "git",
@@ -15,5 +22,24 @@
   "bugs": {
     "url": "https://github.com/bryndisrosa97/verk2_vef2/issues"
   },
-  "homepage": "https://github.com/bryndisrosa97/verk2_vef2#readme"
+  "homepage": "https://github.com/bryndisrosa97/verk2_vef2#readme",
+  "dependencies": {
+    "dotenv": "^8.2.0",
+    "express": "^4.17.1",
+    "express-validator": "^6.9.2",
+    "pg": "^8.5.1",
+    "ejs": "^3.1.6",
+    "xss": "^1.0.8"
+  },
+  "devDependencies": {
+    "eslint": "^7.19.0",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-plugin-import": "^2.22.1",
+    "nodemon": "^2.0.7",
+    "node-sass": "^5.0.0",
+    "concurrently": "^5.3.0",
+    "stylelint": "^13.8.0",
+    "stylelint-config-sass-guidelines": "^7.1.0",
+    "stylelint-config-standard": "^20.0.0"
+  }
 }

@@ -1,0 +1,132 @@
+@import './config';
+
+.sign {
+  justify-content: center;
+  align-items: center;
+
+  &__field {
+  display: flex;
+  //flex-direction: column;
+  margin-bottom: 1rem;
+  }
+  &__form {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+
+  }
+  &__label {
+    font-size: 1.375rem;
+    width: 7em;
+  }
+
+  &__errorheader {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.8rem;
+  }
+
+  &__errorpage {
+    margin: 2rem;
+    padding: 2rem;
+  }
+
+  &__errorlabel {
+    font-size: 1.5rem;
+    
+  }
+  &__input {
+    padding: 8px;
+    max-width: 1200px;
+    flex-grow: 1;
+
+  
+    border: 1px solid #888;
+    border-radius: 3px;
+  }
+
+  &__input:invalid {
+    border-color: rgb(134, 24, 24);
+    background-color: #fbb;
+  }
+
+  &__field--invalid {
+    border-color: rgb(134, 24, 24);
+    background-color: #fbb;
+  }
+
+  &__comment:invalid {
+    border-color: #855;
+    background-color: #fbb;
+  }
+
+  &__comment {
+    padding: 8px;
+    max-width: 1200px;
+    flex: 1;
+    min-height: 6rem;
+    border: 1px solid #888;
+    border-radius: 3px;
+  }
+ 
+  &__checkbox {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: $gutter;
+    justify-content: center;
+    align-items: center;
+    font-size: 1.5rem;
+  }
+  &__checkboxlabel {
+    margin-right: 0.5rem;
+    justify-content: center;
+    align-items: center;
+    margin-left: 0.5rem;
+
+}
+&__box {
+  margin-left: 0.5rem;
+  zoom: 1.8;
+}
+&__errors {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  margin-left: 6rem;
+  width: 100%;
+}
+
+&__error {
+  align-items: center;
+  justify-content: center;
+  margin-left: 12rem;
+  width: 100%;
+}
+
+&__buttom {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid #bfbf8f;
+  border-radius: 8px;
+  background-color: #fff;
+  padding: 0.5rem 5rem;
+  font-size: 3.5rem;
+  font-weight: bolder;
+}
+
+&__button:hover {
+  background-color: rgb(202, 33, 33);
+  transition: background-color 0.5s;
+}
+
+&__buttomMiddle {
+  display: flex;  
+  justify-content: center;  
+  align-items: center; 
+  margin: 3rem; 
+}
+
+}
