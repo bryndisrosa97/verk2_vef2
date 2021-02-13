@@ -2,6 +2,14 @@
 
 [Kynning í fyrirlestri](https://www.youtube.com/watch?v=1kRJBE040oY).
 
+https://vef2-21-v2.herokuapp.com/
+
+# keyrsla á verkefninu
+* `npm install` keyrt fyrst sem sækir öll dependency
+* `npm run setup`, keyrir setup á gagnagrunn, sjá að ofan
+* `npm run start` á að keyra upp express vefþjón á porti `3000`
+* `npm run test` sem á að keyra eslint og stylelint, og sýna engar villur
+
 Verkefnið snýst um að útbúa einfaldan undirskriftarlista með skráningu og birtingu skráninga.
 
 Fyrst
