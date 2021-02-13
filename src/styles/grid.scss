@@ -1,6 +1,5 @@
 @import './config';
 
-// Hér skal nota scss @for til að ítra út klösum fyrir grid
 .grid {
   margin: 0 auto;
   max-width: $max-width;
@@ -34,10 +33,6 @@
   }
 }
 
-/*
-medium—upp að 800px
-*/
-
 @media (max-width: 799px) {
   @for $i from 1 through $columns {
     .col-md-#{$i} {
@@ -52,6 +47,7 @@ medium—upp að 800px
 /*
 small—upp að 500px
 */
+
 @media (max-width: 499px) {
   @for $i from 1 through $columns {
     .col-sm-#{$i} {

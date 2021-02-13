@@ -1,31 +1,45 @@
-
 <section class="signatures">
-  <h2 class="heading">Undirskriftir</h2>
+  <div class="grid">
+    <div class="row">
+      <div class="col col-12">
+        <h2 class="heading">Undir<br class="rwd-break">skriftir</h2>
+      </div>
+    </div>
+  </div>
 
-  <% if (list.length===0) { %>
-    <p>Engar undirskriftir.</p>
-    <% } %>
-      <% if (list.length !==0) { %>
-        <table class="table">
-          <tr class="table__row">
-            <th class="table__headercell">Dags</th>
-            <th class="table__headercell">Nafn</th>
-            <th class="table__headercell">Athugasemd</th>
-          </tr>
-          <% list.forEach((signature)=> { %>
-            <tr class="table__row">
-              <td class="table__cell">
-                <%= formatclock(signature.signed) %>
-              </td>
-              <td class="table__cell">
-                <%= formatAnonymous(signature.name, signature.anonymous) %>
-              </td>
-              <td class="table__cell">
-                <%= signature.comment %>
-              </td>
-            </tr>
-            <% }); %>
-        </table>
-        <% } %>
-          </div>
+  <div class="grid">
+    <% if (list.length===0) { %>
+      <p>Engar undirskriftir.</p>
+      <% } %>
+        <% if (list.length !==0) { %>
+          <table class="table">
+            <div class="row">
+              <div class="col col-12 col-sm-12">
+                <tr class="table__row">
+                  <th class="table__headercell">Dags</th>
+                  <th class="table__headercell">Nafn</th>
+                  <th class="table__headercell">Athugasemd</th>
+                </tr>
+              </div>
+            </div>
+            <% list.forEach((signature)=> { %>
+              <div class="row">
+                <div class="col col-12 col-sm-12">
+                  <tr class="table__row">
+                    <td class="table__cell">
+                      <%= formatclock(signature.signed) %>
+                    </td>
+                    <td class="table__cell">
+                      <%= formatAnonymous(signature.name, signature.anonymous) %>
+                    </td>
+                    <td class="table__cell">
+                      <%= signature.comment %>
+                    </td>
+                  </tr>
+                </div>
+              </div>
+              <% }); %>
+          </table>
+          <% } %>
+  </div>
 </section>

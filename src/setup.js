@@ -16,26 +16,17 @@ if (!connectionString) {
 }
 
 const ssl = nodeEnv !== 'development' ? { rejectUnauthorized: false } : false;
-
 const pool = new pg.Pool({ connectionString, ssl });
-
 const readFileAsync = util.promisify(fs.readFile);
-//const { Client } = require('pg');
-
-//const connectionString = process.env.DATABASE_URL;
-
 
 async function query(q) {
   const client = await pool.connect();
-
-
   try {
     const result = await client.query(q);
-
     const { rows } = result;
     return rows;
   } catch (err) {
-    console.error('Error ', e);
+    console.error('Error ', err);
     throw err;
   } finally {
     await client.end();

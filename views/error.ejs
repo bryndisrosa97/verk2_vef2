@@ -1,9 +1,13 @@
 <%- include('header') -%>
 
-<h1>Villa kom upp.</h1>
+  <h1>Villa kom upp.</h1>
+  <h2> Hefuru undiritað áður? </h2>
 
-<% if (typeof error !== 'undefined') { %>
-  <p><%= error %></p>
-<% } %>
+  <% if (typeof error !=='undefined' ) { %>
+    <p>
+      <%= error %>
+    </p>
+    <% } %>
+      <a href="/">Til baka</a>
 
-<%- include('footer') -%>
+      <%- include('footer') -%>

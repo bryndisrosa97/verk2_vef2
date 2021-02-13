@@ -32,24 +32,24 @@ app.use('/', r);
  * @returns {boolean} `true` ef `field` er í `errors`, `false` annars
  */
 function isInvalid(field, errors) {
-  return Boolean(errors.find(i => i.param === field));
+  return Boolean((errors).find((i) => i.param === (field)));
 }
 
 app.locals.isInvalid = isInvalid;
 
-function notFoundHandler(req, res, next) {
+function notFoundHandler(req, res) {
   res.status(404);
   return res.send('404 villa! - Síða fannst ekki');
 }
 
-// eslint-disable-next-line no-unused-vars
-function errorHandler(err, req, res, next) {
+function errorHandler(err, req, res) {
   console.error(err);
   return res.status(500).send('500 villa!');
 }
+
 app.use(notFoundHandler);
 app.use(errorHandler);
-// Verðum að setja bara *port* svo virki á heroku
+
 app.listen(port, () => {
   console.info(`Server running at http://localhost:${port}/`);
 });

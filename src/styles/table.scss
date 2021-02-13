@@ -1,16 +1,32 @@
 .table {
+  border: 1.5px solid rgb(149, 170, 93);
   border-collapse: collapse;
+  margin-top: 1.5rem;
   width: 100%;
-  border: 1.5px solid rgb(149, 170, 93);;
-  
-  &__headercell {
-    padding: 0.75rem;
-    border: 1.5px solid rgb(149, 170, 93);;
-  }
-  
-  &__cell {
-    padding: 0.75rem;
-    border: 1.5px solid rgb(149, 170, 93);;
+
+  @media screen and (max-width: 551px) {
+    font-size: 1rem;
+    margin-top: 0.5rem;
   }
 
+  &__headercell {
+    border: 1.5px solid rgb(149, 170, 93);
+    font-size: 1.5rem;
+    padding: 0.75rem;
+  }
+
+  &__cell {
+    border: 1.5px solid rgb(149, 170, 93);
+    font-size: 1.2rem;
+    padding: 0.75rem;
+
+    @media screen and (max-width: 551px) {
+      font-size: 1rem;
+    }
+  }
+
+  &__row {
+    border: 1.5px solid rgb(149, 170, 93);
+    padding: 0.75rem;
+  }
 }

@@ -1,46 +1,86 @@
 <%- include('header') -%>
-  <h1 class="heading">Undirskriftarlisti</h1>
+  <div class="grid">
+    <div class="row">
+      <div class="col col-12">
+        <h1 class="heading">Undirskriftar<br class="rwd-break">listi</h1>
+      </div>
+    </div>
+  </div>
 
   <main class="sign">
 
-    <form class="sign__form" method="post" action="/">
-      <div class="sign__field<%= locals.isInvalid('name', errors) ?  ' field--invalid' : '' %>">
-        <label class="sign__label" for="name">Nafn</label>
-        <input type="text" name="name" id="name" value="<%= name %>" class="sign__input <%= locals.isInvalid('name', errors) ?  ' input--invalid' : '' %>">
-      </div>
-      <div class="sign__field<%= locals.isInvalid('nationalId', errors) ?  ' field--invalid' : '' %>">
-        <label class="sign__label" for="nationalId">Kennitala</label>
-        <input type="text" name="nationalId" id="nationalId" value="<%= nationalId %>" class="sign__input <%= locals.isInvalid('nationalId', errors) ?  ' input--invalid' : '' %>">
-      </div>
-      <div class="sign__field<%= locals.isInvalid('comment', errors) ?  ' field--invalid' : '' %>">
-        <label class="sign__label" for="text">Athugasemd:</label>
-        <textarea name="comment" id="comment" class="sign__comment"><%= comment %></textarea>
-      </div>
-      <div class="sign__checkbox">
-        <input class="sign__box" type="checkbox" name="anonymous" <%=anonymous ? 'checked' : '' %>
-        <%= anonymous==='checked' ? true : false %>>
-          <label class="sign__checkboxlabel" for="anonymous">Ekki birta nafn á lista</label>
-      </div>
-      <div class="sign__errorpage">
-        <% if (errors.length> 0) { %>
-          <h2 class="sign__errorheader">Villur við undirskrift:</h2>
-          <ul class="sign__errors">
-            <% errors.forEach((error)=> { %>
-              <li class="sign__error">
-                <label for="<%= error.param %>" class="sign__errorlabel">
-                  <%= error.msg %>
-                </label>
-              </li>
-              <% }); %>
-          </ul>
-      </div>
-      <% } %>
-        <div class="sign__buttomMiddle">
-          <button class="sign__buttom">Skrifa undir</button>
+    <div class="grid">
+      <form class="sign__form" method="post" action="/">
+        <div class="row">
+          <div class="col col-12">
+            <div class="sign__field<%= locals.isInvalid('name', errors) ?  ' field--invalid' : '' %>">
+              <label class="sign__label" for="name">Nafn</label>
+              <input type="text" name="name" id="name" value="<%= name %>"
+                class="sign__input <%= locals.isInvalid('name', errors) ?  ' input--invalid' : '' %>">
+            </div>
+          </div>
         </div>
-    </form>
+
+        <div class="row">
+          <div class="col col-12">
+            <div class="sign__field<%= locals.isInvalid('nationalId', errors) ?  ' field--invalid' : '' %>">
+              <label class="sign__label" for="nationalId">Kennitala</label>
+              <input type="text" name="nationalId" id="nationalId" value="<%= nationalId %>"
+                class="sign__input <%= locals.isInvalid('nationalId', errors) ?  ' input--invalid' : '' %>">
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-12">
+            <div class="sign__field<%= locals.isInvalid('comment', errors) ?  ' field--invalid' : '' %>">
+              <label class="sign__label" for="text">Athugasemd:</label>
+              <textarea name="comment" id="comment" class="sign__comment <%= locals.isInvalid('comment', errors) ?  ' input--invalid' : '' %>"><%= comment %></textarea>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col col-12">
+            <div class="sign__checkbox">
+              <input class="sign__box" type="checkbox" name="anonymous" <%=anonymous ? 'checked' : '' %>
+              <%= anonymous==='checked' ? true : false %>>
+                <label class="sign__checkboxlabel" for="anonymous">Ekki birta nafn á lista</label>
+            </div>
+          </div>
+        </div>
+
+        <div class="sign__errorpage">
+          <% if (errors.length> 0) { %>
+            <h2 class="sign__errorheader">Villur við undirskrift:</h2>
+            <ul class="sign__errors">
+              <div class="row">
+                <div class="col col-12">
+                  <% errors.forEach((error)=> { %>
+                    <li class="sign__error">
+                      <label for="<%= error.param %>" class="sign__errorlabel">
+                        <%= error.msg %>
+                      </label>
+                    </li>
+                    <% }); %>
+                </div>
+              </div>
+            </ul>
+        </div>
+        <% } %>
+
+          <div class="row">
+            <div class="col col-12">
+              <div class="sign__buttomMiddle">
+                <button class="sign__buttom">Skrifa undir</button>
+              </div>
+            </div>
+          </div>
+
+      </form>
+    </div>
+
     <hr class="line">
 
     <%- include('signatures') -%>
-  </main>
-  <%- include('footer') -%>
+      <%- include('footer') -%>

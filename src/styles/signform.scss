@@ -1,20 +1,20 @@
 @import './config';
 
 .sign {
-  justify-content: center;
   align-items: center;
+  justify-content: center;
 
   &__field {
-  display: flex;
-  //flex-direction: column;
-  margin-bottom: 1rem;
+    display: flex;
+    margin-bottom: 1rem;
   }
+
   &__form {
     align-items: center;
     justify-content: center;
     width: 100%;
-
   }
+
   &__label {
     font-size: 1.375rem;
     width: 7em;
@@ -22,10 +22,10 @@
 
   &__errorheader {
     align-items: center;
+    font-size: 1.8rem;
+    font-weight: 800;
     justify-content: center;
     text-align: center;
-    font-weight: 800;
-    font-size: 1.8rem;
   }
 
   &__errorpage {
@@ -35,98 +35,91 @@
 
   &__errorlabel {
     font-size: 1.5rem;
-    
   }
-  &__input {
-    padding: 8px;
-    max-width: 1200px;
-    flex-grow: 1;
 
-  
+  &__input {
     border: 1px solid #888;
     border-radius: 3px;
+    flex-grow: 1;
+    padding: 8px;
   }
 
   &__input:invalid {
-    border-color: rgb(134, 24, 24);
     background-color: #fbb;
+    border-color: rgb(134, 24, 24);
   }
 
   &__field--invalid {
+    background-color: #fbb;
     border-color: rgb(134, 24, 24);
-    background-color: #fbb;
-  }
-
-  &__comment:invalid {
-    border-color: #855;
-    background-color: #fbb;
   }
 
   &__comment {
-    padding: 8px;
-    max-width: 1200px;
-    flex: 1;
-    min-height: 6rem;
     border: 1px solid #888;
     border-radius: 3px;
+    flex: 1;
+    min-height: 6rem;
+    padding: 8px;
   }
- 
+
+  &__comment:invalid {
+    background-color: #fbb;
+    border-color: #855;
+  }
+
   &__checkbox {
+    align-items: center;
     display: flex;
     flex-wrap: wrap;
-    margin-bottom: $gutter;
-    justify-content: center;
-    align-items: center;
     font-size: 1.5rem;
-  }
-  &__checkboxlabel {
-    margin-right: 0.5rem;
     justify-content: center;
+    margin-bottom: $gutter;
+  }
+
+  &__checkboxlabel {
     align-items: center;
+    justify-content: center;
     margin-left: 0.5rem;
+    margin-right: 0.5rem;
+  }
 
-}
-&__box {
-  margin-left: 0.5rem;
-  zoom: 1.8;
-}
-&__errors {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  margin-left: 6rem;
-  width: 100%;
-}
+  &__box {
+    margin-left: 0.5rem;
+    zoom: 1.8;
+  }
 
-&__error {
-  align-items: center;
-  justify-content: center;
-  margin-left: 12rem;
-  width: 100%;
-}
+  &__errors {
+    display: flex;
+    justify-content: center;
+  }
 
-&__buttom {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  border: 1px solid #bfbf8f;
-  border-radius: 8px;
-  background-color: #fff;
-  padding: 0.5rem 5rem;
-  font-size: 3.5rem;
-  font-weight: bolder;
-}
+  &__error {
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+  }
 
-&__button:hover {
-  background-color: rgb(202, 33, 33);
-  transition: background-color 0.5s;
-}
+  &__buttom {
+    align-items: center;
+    background-color: #fff;
+    border: 1px solid #bfbf8f;
+    border-radius: 8px;
+    display: flex;
+    font-size: 3rem;
+    font-weight: bolder;
+    justify-content: center;
+    padding: 0.5rem 5rem;
+  }
 
-&__buttomMiddle {
-  display: flex;  
-  justify-content: center;  
-  align-items: center; 
-  margin: 3rem; 
-}
+  &__button:hover {
+    background-color: rgb(202, 33, 33);
+    transition: background-color 0.5s;
+  }
 
+  &__buttomMiddle {
+    align-items: center;
+    display: flex;
+    justify-content: center;
+    margin: 3rem;
+  }
 }
