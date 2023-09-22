@@ -94,28 +94,7 @@ Setja skal upp `eslint` til að linta JavaScript kóða, gefin er `.eslintrc.js`
 * 10% - Síðan sýnir skráningar úr gagngagrunni
 * 20% – Verkefni sett upp á Heroku
 
-## Sett fyrir
 
-Verkefni sett fyrir í fyrirlestri fimmtudaginn 28. janúar 2021. Sett fyrir í raun 2. feb á Canvas.
-
-## Skil
-
-Skila skal í Canvas í seinasta lagi fyrir lok dags miðvikudaginn 11. febrúar 2021.
-
-Skilaboð skulu innihalda slóð á GitHub repo fyrir verkefni, og dæmatímakennurum skal hafa verið boðið í repo ([sjá leiðbeiningar](https://docs.github.com/en/free-pro-team@latest/github/setting-up-and-managing-your-github-user-account/inviting-collaborators-to-a-personal-repository)). Notendanöfn þeirra eru:
-
-* `jonnigs`
-* `mimiqkz`
-* `Steinalicious`
-* `zurgur`
-
-Hver dagur eftir skil dregur verkefni niður um 10%, allt að 20% ef skilað laugardaginn 14. febrúar 2020 en þá lokar fyrir skil.
-
-## Einkunn
-
-Sett verða fyrir 6 minni verkefni þar sem 5 bestu gilda 8% hvert, samtals 40% af lokaeinkunn.
-
-Sett verða fyrir tvö hópverkefni þar sem hvort um sig gildir 10%, samtals 20% af lokaeinkunn.
 
 ---
 
